@@ -15,6 +15,9 @@ class CreatePersonnagesTable extends Migration
     {
         Schema::create('personnages', function (Blueprint $table) {
             $table->id();
+            $table->string('prenom');
+            $table->string('nom')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
